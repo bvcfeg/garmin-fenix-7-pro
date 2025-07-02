@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta name="msvalidate.01" content="B807FE4A03DB636D50EF7962DDBBE11F" />
+    <meta name="google-site-verification" content="SoL8j53Pt51N5ZOyVLEamd6kqUGf_TFwgPlVFW55v-E" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about the latest Garmin Fenix 7 Pro Update, including new features, improvements, and how to install it.">
@@ -46,8 +48,8 @@
         }
 
         .content {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
             padding: 20px;
             max-width: 1200px;
@@ -95,15 +97,9 @@
             width: 100%;
         }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .content {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .content {
-                grid-template-columns: 1fr 1fr 1fr;
+                flex-direction: column; /* Ensure all sections stack vertically on smaller screens */
             }
         }
     </style>
