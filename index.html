@@ -57,62 +57,32 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Light Background Colors for Each Section */
-        .section-1 {
-            background-color: #ecf8ff; /* Light Blue */
+        .section {
+            background-color: #ecf8ff;
             padding: 20px;
             border-radius: 8px;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        .section-1:hover {
-            background-color: #d1efff; /* Slightly Darker Blue */
+        .section:hover {
+            background-color: #d1efff;
         }
 
-        .section-2 {
-            background-color: #f1f9e6; /* Light Greenish Yellow */
-            padding: 20px;
-            border-radius: 8px;
-            color: #333;
-            transition: background-color 0.3s ease;
-        }
-
-        .section-2:hover {
-            background-color: #e2f3cc; /* Slightly Darker Greenish Yellow */
-        }
-
-        .section-3 {
-            background-color: #e0f7fa; /* Light Cyan */
-            padding: 20px;
-            border-radius: 8px;
-            color: #333;
-            transition: background-color 0.3s ease;
-        }
-
-        .section-3:hover {
-            background-color: #b2ebf2; /* Slightly Darker Cyan */
-        }
-
-        .section-4 {
-            background-color: #f9f3ff; /* Light Lavender */
-            padding: 20px;
-            border-radius: 8px;
-            color: #333;
-            transition: background-color 0.3s ease;
-        }
-
-        .section-4:hover {
-            background-color: #e6d6f9; /* Slightly Darker Lavender */
-        }
-
-        .content h2 {
+        .section-title {
             font-size: 1.8em;
             color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
         }
 
-        .content p {
-            line-height: 1.6;
+        .section-content {
+            display: none;
             font-size: 1.1em;
+            margin-top: 15px;
+            color: #333;
+            line-height: 1.6;
         }
 
         footer {
@@ -128,10 +98,6 @@
         @media (min-width: 768px) {
             .content {
                 grid-template-columns: 1fr 1fr;
-            }
-
-            .content h2 {
-                font-size: 2em;
             }
         }
 
@@ -151,38 +117,46 @@
     </header>
 
     <div class="content">
-        <section class="section-1">
-            <h2>Introduction to the Garmin Fenix 7 Pro Update</h2>
-            <p>The Garmin Fenix 7 Pro is packed with high-performance features, including advanced GPS capabilities, extensive health and fitness tracking, and robust build quality. Garmin has recently rolled out an update for the Fenix 7 Pro, bringing enhanced performance, new features, and some bug fixes. In this article, we’ll break down everything you need to know about this update.</p>
-        </section>
+        <div class="section" onclick="toggleContent('section-1-content')">
+            <h2 class="section-title">Introduction to the Garmin Fenix 7 Pro Update</h2>
+            <div id="section-1-content" class="section-content">
+                <p>The Garmin Fenix 7 Pro is packed with high-performance features, including advanced GPS capabilities, extensive health and fitness tracking, and robust build quality. Garmin has recently rolled out an update for the Fenix 7 Pro, bringing enhanced performance, new features, and some bug fixes. In this article, we’ll break down everything you need to know about this update.</p>
+            </div>
+        </div>
 
-        <section class="section-2">
-            <h2>What’s New in the Garmin Fenix 7 Pro Update?</h2>
-            <p>This update introduces several exciting new features and improvements to your Fenix 7 Pro device:</p>
-            <ul>
-                <li><strong>Improved GPS Tracking:</strong> Experience more accurate and reliable GPS positioning for your outdoor activities.</li>
-                <li><strong>Enhanced Fitness Metrics:</strong> New data points and metrics for a more detailed analysis of your health and fitness performance.</li>
-                <li><strong>Optimized Battery Life:</strong> The update includes energy-saving tweaks that enhance the battery life of your device.</li>
-                <li><strong>Bug Fixes:</strong> Several minor bugs and glitches have been resolved to ensure smoother performance.</li>
-            </ul>
-        </section>
+        <div class="section" onclick="toggleContent('section-2-content')">
+            <h2 class="section-title">What’s New in the Garmin Fenix 7 Pro Update?</h2>
+            <div id="section-2-content" class="section-content">
+                <p>This update introduces several exciting new features and improvements to your Fenix 7 Pro device:</p>
+                <ul>
+                    <li><strong>Improved GPS Tracking:</strong> Experience more accurate and reliable GPS positioning for your outdoor activities.</li>
+                    <li><strong>Enhanced Fitness Metrics:</strong> New data points and metrics for a more detailed analysis of your health and fitness performance.</li>
+                    <li><strong>Optimized Battery Life:</strong> The update includes energy-saving tweaks that enhance the battery life of your device.</li>
+                    <li><strong>Bug Fixes:</strong> Several minor bugs and glitches have been resolved to ensure smoother performance.</li>
+                </ul>
+            </div>
+        </div>
 
-        <section class="section-3">
-            <h2>How to Install the Garmin Fenix 7 Pro Update</h2>
-            <p>Updating your Garmin Fenix 7 Pro is simple. Just follow these steps:</p>
-            <ol>
-                <li>Ensure your Fenix 7 Pro is fully charged.</li>
-                <li>Connect to a Wi-Fi network or pair it with your smartphone running the Garmin Connect app.</li>
-                <li>Open the Garmin Connect app or Garmin Express on your PC.</li>
-                <li>Check for the update and follow the on-screen instructions.</li>
-                <li>Once completed, restart your Fenix 7 Pro to finalize the update.</li>
-            </ol>
-        </section>
+        <div class="section" onclick="toggleContent('section-3-content')">
+            <h2 class="section-title">How to Install the Garmin Fenix 7 Pro Update</h2>
+            <div id="section-3-content" class="section-content">
+                <p>Updating your Garmin Fenix 7 Pro is simple. Just follow these steps:</p>
+                <ol>
+                    <li>Ensure your Fenix 7 Pro is fully charged.</li>
+                    <li>Connect to a Wi-Fi network or pair it with your smartphone running the Garmin Connect app.</li>
+                    <li>Open the Garmin Connect app or Garmin Express on your PC.</li>
+                    <li>Check for the update and follow the on-screen instructions.</li>
+                    <li>Once completed, restart your Fenix 7 Pro to finalize the update.</li>
+                </ol>
+            </div>
+        </div>
 
-        <section class="section-4">
-            <h2>Why Update?</h2>
-            <p>Regular updates ensure your Garmin Fenix 7 Pro stays ahead of the curve, providing you with the latest features, security patches, and improvements. Whether you’re a dedicated athlete, outdoor adventurer, or simply someone who enjoys reliable GPS and fitness tracking, keeping your device up-to-date is crucial to getting the most out of your Garmin experience.</p>
-        </section>
+        <div class="section" onclick="toggleContent('section-4-content')">
+            <h2 class="section-title">Why Update?</h2>
+            <div id="section-4-content" class="section-content">
+                <p>Regular updates ensure your Garmin Fenix 7 Pro stays ahead of the curve, providing you with the latest features, security patches, and improvements. Whether you’re a dedicated athlete, outdoor adventurer, or simply someone who enjoys reliable GPS and fitness tracking, keeping your device up-to-date is crucial to getting the most out of your Garmin experience.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Zendesk Widget script -->
@@ -193,6 +167,16 @@
         <p>&copy; 2025 Garmin. All rights reserved. | <a href="https://navisolve.com/" target="_blank">Garmin Support</a></p>
     </footer>
 
+    <script>
+        function toggleContent(sectionId) {
+            const content = document.getElementById(sectionId);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
